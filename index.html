@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b4d4f10c45.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Project Wireframe</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-wrapper">
+        <div class="weather-content">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  class="form-control"
+                  id="input-city"
+                  placeholder="Enter City..."
+                  autofocus="on"
+                />
+              </div>
+
+              <div class="col-3">
+                <button type="submit" class="btn btn-dark mb-2" id="search">Search</button>
+                <button type="submit" class="btn btn-success mb-2" id="current-weather">Current</button>
+              </div>
+            </div>
+          </form>
+
+          <h1>current city</h1>
+          <p id="current-date"></p>
+          <i class="fas fa-sun sun-icon"></i>
+          <span id="current-temp">current temp</span>
+          <span>
+            ˚F
+          </span>
+
+          <div class="row">
+            <div class="col-2">
+              Mon <br />
+              <i class="fas fa-cloud"></i>
+              60˚/75˚
+            </div>
+            <div class="col-2">Tues</div>
+            <div class="col-2">Wed</div>
+            <div class="col-2">Thurs</div>
+            <div class="col-2">Fri</div>
+            <div class="col-2">Sat</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>

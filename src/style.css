@@ -1,0 +1,28 @@
+.weather-wrapper {
+    border: 2px solid red;
+    margin: 20px;
+    padding: 20px;
+}
+
+.weather-content {
+    border: 2px solid red;
+    padding: 20px;
+    
+}
+
+.sun-icon {
+    font-size: xx-large;
+}
+
+.col-2 {
+    border: 2px solid red;
+    text-align: center;
+}
+
+.fa-cloud {
+    font-size: x-large;
+}
+
+#current-temp {
+    font-size: xx-large;
+}
