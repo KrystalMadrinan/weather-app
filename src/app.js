@@ -11,6 +11,25 @@ function formatDate(date) {
     "Saturday",
   ];
 
+  let months = [
+    "Jan",
+    "Feb",
+    "March",
+    "Apr",
+    "May",
+    "June",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  let today = date.getDate();
+
+  let month = months[date.getMonth()];
+  
   let day = days[currentDate.getDay()];
 
   let hours = date.getHours();
@@ -23,7 +42,7 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hours}:${minutes}`;
+  return `${day} ${today} ${month} ${hours}:${minutes}`;
 }
 
 let todaysDate = document.querySelector("p#current-date");
@@ -59,7 +78,6 @@ searchButton.addEventListener("click", updateCity);
 
 function showWeather(response) {
   let currentTemp = Math.round(response.data.main.temp);
-  console.log(currentTemp);
 
   let cityTemp = document.querySelector("span#current-temp");
   cityTemp.innerHTML = `${currentTemp}`;
@@ -89,3 +107,5 @@ function getPosition(event) {
 
 let button = document.querySelector("button#current-weather");
 button.addEventListener("click", getPosition);
+
+searchCity("Seattle");

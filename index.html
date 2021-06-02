@@ -40,7 +40,7 @@
                 </button>
                 <button
                   type="submit"
-                  class="btn btn-success mb-2"
+                  class="btn btn-secondary mb-2"
                   id="current-weather"
                 >
                   Current
@@ -51,9 +51,16 @@
 
           <h1>current city</h1>
           <p id="current-date"></p>
-          <i class="fas fa-sun sun-icon"></i>
-          <span id="current-temp">current temp</span>
-          <span> ˚F </span>
+
+          <div id="temp-display">
+            <i class="fas fa-sun sun-icon"></i>
+            <span id="current-temp">current temp</span>
+            
+              <span a href="#" id="fahrenheit">˚F</span>
+              <span id="divider">|</span>
+              <span a href="#" id="celsius">˚C</span>
+           
+          </div>
 
           <div class="row">
             <div class="col-2">
