@@ -16,6 +16,11 @@
       src="https://kit.fontawesome.com/b4d4f10c45.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
     <title>Project Wireframe</title>
   </head>
   <body>
@@ -54,19 +59,20 @@
               <h1>current city</h1>
               <p id="current-date">today's date</p>
               <span id="description"></span>
-
+              
               <div id="temp-display">
-                <i class="fas fa-sun sun-icon"></i>
+                <img src="" alt="" id="icon">
                 <span id="current-temp">current temp</span>
-
-                <span a href="#" id="fahrenheit">˚F</span>
-                <span id="divider">|</span>
-                <span a href="#" id="celsius">˚C</span>
+                <span id="units">
+                  <span a href="#" id="fahrenheit">˚F</span>
+                  <span id="divider">|</span>
+                  <span a href="#" id="celsius">˚C</span>
+                </span>
               </div>
             </div>
 
             <div class="col-6">
-              <ul>
+              <ul id="weather-info">
                 <li>Wind: <span id="wind"></span> km/h</li>
                 <li>Precipitation: <span id="precipitation"></span></li>
                 <li>Humidity: <span id="humidity"></span>%</li>
@@ -91,7 +97,9 @@
     </div>
 
     <footer>
-      <a href="https://github.com/KrystalMadrinan/weather-app">Open-source code</a>
+      <a href="https://github.com/KrystalMadrinan/weather-app"
+        >Open-source code</a
+      >
       by Krystal Madrinan
     </footer>
     <script src="src/app.js"></script>

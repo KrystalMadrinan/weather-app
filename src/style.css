@@ -1,17 +1,22 @@
 body {
-    background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
+background: linear-gradient(to top, #09203f 0%, #537895 100%);
+background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;    
+font-family: 'Roboto Slab', serif;
 }
 
 
 .weather-wrapper {
-    border: 2px solid white;
+    border: 2px solid aliceblue;
     border-radius: 10px;
     margin-top: 20%;
     padding: 20px;
+
 }
 
 .weather-content {
-    background-color: aliceblue;
+    background: rgba(255, 255, 255, 0.844);
     border: 2px solid white;
     border-radius: 10px;
     padding: 20px;
@@ -31,12 +36,21 @@ body {
     font-size: x-large;
 }
 
+
 #current-temp {
     font-size: 55px;
 }
 
+#weather-info {
+    list-style: none;
+}
 
+#units {
+    position: relative;
+    top: -30px;
+}
 
 footer {
     text-align: center;
+    color: white;
 }

@@ -29,7 +29,7 @@ function formatDate(date) {
   let today = date.getDate();
 
   let month = months[date.getMonth()];
-  
+
   let day = days[currentDate.getDay()];
 
   let hours = date.getHours();
@@ -70,11 +70,9 @@ function searchCity(city) {
 let searchButton = document.querySelector("button#search");
 searchButton.addEventListener("click", updateCity);
 
-
-
 // API STUFF
 
-// DISPLAYS TEMPERATURE OF USER'S INPUT CITY 
+// DISPLAYS TEMPERATURE OF USER'S INPUT CITY
 
 function showWeather(response) {
   let currentTemp = Math.round(response.data.main.temp);
@@ -86,15 +84,21 @@ function showWeather(response) {
   newCity.innerHTML = response.data.name;
 
   let description = document.querySelector("#description");
-  description.innerHTML = response.data.weather[0].main; 
+  description.innerHTML = response.data.weather[0].main;
 
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.main.humidity;
 
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
-}
 
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+}
 
 // DISPLAYS USER'S CURRENT LOCATION NAME
 
