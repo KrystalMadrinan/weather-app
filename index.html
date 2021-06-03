@@ -49,17 +49,29 @@
             </div>
           </form>
 
-          <h1>current city</h1>
-          <p id="current-date"></p>
+          <div class="row">
+            <div class="col-6">
+              <h1>current city</h1>
+              <p id="current-date">today's date</p>
+              <span id="description"></span>
 
-          <div id="temp-display">
-            <i class="fas fa-sun sun-icon"></i>
-            <span id="current-temp">current temp</span>
-            
-              <span a href="#" id="fahrenheit">˚F</span>
-              <span id="divider">|</span>
-              <span a href="#" id="celsius">˚C</span>
-           
+              <div id="temp-display">
+                <i class="fas fa-sun sun-icon"></i>
+                <span id="current-temp">current temp</span>
+
+                <span a href="#" id="fahrenheit">˚F</span>
+                <span id="divider">|</span>
+                <span a href="#" id="celsius">˚C</span>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <ul>
+                <li>Wind: <span id="wind"></span> km/h</li>
+                <li>Precipitation: <span id="precipitation"></span></li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+              </ul>
+            </div>
           </div>
 
           <div class="row">
@@ -79,7 +91,8 @@
     </div>
 
     <footer>
-      <a href="https://github.com/KrystalMadrinan/weather-app">GitHub Repo</a>
+      <a href="https://github.com/KrystalMadrinan/weather-app">Open-source code</a>
+      by Krystal Madrinan
     </footer>
     <script src="src/app.js"></script>
   </body>

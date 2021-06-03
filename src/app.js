@@ -84,6 +84,15 @@ function showWeather(response) {
 
   let newCity = document.querySelector("h1");
   newCity.innerHTML = response.data.name;
+
+  let description = document.querySelector("#description");
+  description.innerHTML = response.data.weather[0].main; 
+
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = response.data.main.humidity;
+
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = Math.round(response.data.wind.speed);
 }
 
 
