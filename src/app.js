@@ -98,6 +98,8 @@ function showWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  fahrenheitTemperature = response.data.main.temp;
 }
 
 // DISPLAYS USER'S CURRENT LOCATION NAME
@@ -120,5 +122,36 @@ function getPosition(event) {
 
 let button = document.querySelector("button#current-weather");
 button.addEventListener("click", getPosition);
+
+// CONVERT FAHRENHEIT TO CELSIUS
+
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  let celsiusTemp = ((fahrenheitTemperature - 32) * 5) / 9;
+  let tempElement = document.querySelector("#current-temp");
+  tempElement.innerHTML = Math.round(celsiusTemp);
+
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+}
+
+let fahrenheitTemperature = null;
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", showCelsiusTemp);
+
+// CONVERT CELSIUS TO FAHRENHEIT
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#current-temp");
+  tempElement.innerHTML = Math.round(fahrenheitTemperature);
+
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 searchCity("Seattle");
