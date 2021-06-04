@@ -70,13 +70,11 @@ function searchCity(city) {
 let searchButton = document.querySelector("button#search");
 searchButton.addEventListener("click", updateCity);
 
-// API STUFF
-
 // DISPLAYS TEMPERATURE OF USER'S INPUT CITY
 
 function showWeather(response) {
   let currentTemp = Math.round(response.data.main.temp);
-
+  console.log(response.data);
   let cityTemp = document.querySelector("span#current-temp");
   cityTemp.innerHTML = `${currentTemp}`;
 
@@ -154,4 +152,31 @@ function showFahrenheitTemp(event) {
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
+// SHOW FORECAST
+
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                <i class="fas fa-cloud"></i>
+                <div class="weather-forecast-temp">
+                  <span class="weather-forecast-temp-max">75˚</span>
+                  <span class="weather-forecast-temp-min">60˚</span>
+                </div>
+              </div>
+            `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
 searchCity("Seattle");
+displayForecast();

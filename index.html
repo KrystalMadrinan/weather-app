@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
       rel="stylesheet"
     />
-    <title>Project Wireframe</title>
+    <title>Weather App</title>
   </head>
   <body>
     <div class="container">
@@ -59,9 +59,9 @@
               <h1></h1>
               <p id="current-date"></p>
               <span id="description"></span>
-              
+
               <div id="temp-display">
-                <img src="" alt="" id="icon">
+                <img src="" alt="" id="icon" />
                 <span id="current-temp"></span>
                 <span id="units">
                   <span a href="#" id="fahrenheit" class="active">˚F</span>
@@ -74,24 +74,12 @@
             <div class="col-6">
               <ul id="weather-info">
                 <li>Wind: <span id="wind"></span> km/h</li>
-                <li>Precipitation: <span id="precipitation"></span></li>
                 <li>Humidity: <span id="humidity"></span>%</li>
               </ul>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-2">
-              Mon <br />
-              <i class="fas fa-cloud"></i>
-              60˚/75˚
-            </div>
-            <div class="col-2">Tues</div>
-            <div class="col-2">Wed</div>
-            <div class="col-2">Thurs</div>
-            <div class="col-2">Fri</div>
-            <div class="col-2">Sat</div>
-          </div>
+          <div class="weather-forecast" id="forecast"></div>  
         </div>
       </div>
     </div>

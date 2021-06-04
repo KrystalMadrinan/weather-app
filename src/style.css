@@ -50,6 +50,10 @@ font-family: 'Roboto Slab', serif;
     top: -30px;
 }
 
+.weather-forecast {
+    text-align: center;
+}
+
 footer {
     text-align: center;
     color: aliceblue;
