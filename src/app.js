@@ -132,34 +132,6 @@ button.addEventListener("click", getPosition);
 
 // CONVERT FAHRENHEIT TO CELSIUS
 
-function showCelsiusTemp(event) {
-  event.preventDefault();
-  let celsiusTemp = ((fahrenheitTemperature - 32) * 5) / 9;
-  let tempElement = document.querySelector("#current-temp");
-  tempElement.innerHTML = Math.round(celsiusTemp);
-
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-}
-
-let fahrenheitTemperature = null;
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", showCelsiusTemp);
-
-// CONVERT CELSIUS TO FAHRENHEIT
-
-function showFahrenheitTemp(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#current-temp");
-  tempElement.innerHTML = Math.round(fahrenheitTemperature);
-
-  fahrenheitLink.classList.add("active");
-  celsiusLink.classList.remove("active");
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 // SHOW FORECAST
 
@@ -193,7 +165,7 @@ function displayForecast(response) {
                 <div class="weather-forecast-temp">
                   <span class="weather-forecast-temp-max">${Math.round(
                     forecastDay.temp.max
-                  )}˚</span>
+                  )}˚</span>/
                   <span class="weather-forecast-temp-min">${Math.round(
                     forecastDay.temp.min
                   )}˚</span>
